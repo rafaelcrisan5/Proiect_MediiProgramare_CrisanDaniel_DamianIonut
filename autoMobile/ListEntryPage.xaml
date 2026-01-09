@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autoMobile.ListEntryPage"
+             Title="Portal Client Service Auto">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adaugă" Clicked="OnAddClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Verifică starea mașinii tale" 
+               FontSize="20" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="plateEntry" 
+               Placeholder="Introdu nr. înmatriculare (ex: B123ABC)" 
+               HorizontalTextAlignment="Center" />
+
+        <Button Text="Caută Programări" 
+                Clicked="OnSearchClicked" 
+                BackgroundColor="#2196F3" 
+                TextColor="White" />
+
+        <ListView x:Name="listView" 
+                  Margin="0,20,0,0"
+                  HasUnevenRows="True"
+                  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout Padding="10">
+                            <Label Text="{Binding data, StringFormat='Data: {0:dd/MM/yyyy}'}" 
+                                   FontAttributes="Bold" 
+                                   FontSize="16" />
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="Status:" FontAttributes="Italic" />
+                                <Label Text="{Binding status}" />
+                                <Label Text="|" Margin="5,0" />
+                                <Label Text="Total:" FontAttributes="Italic" />
+                                <Label Text="{Binding pretTotal}" />
+                                <Label Text="RON" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

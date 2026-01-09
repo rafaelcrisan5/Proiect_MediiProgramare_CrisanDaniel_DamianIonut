@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autoMobile.ListDetailsPage"
+             Title="Detalii Programare">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Frame BackgroundColor="#F0F8FF" CornerRadius="10">
+                <VerticalStackLayout>
+                    <Label Text="{Binding numarInmatriculare}" 
+                           FontSize="24" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding data, StringFormat='Data: {0:dd/MM/yyyy}'}" 
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding status, StringFormat='Status: {0}'}" 
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Servicii Efectuate:" 
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   Margin="0,10,0,0"/>
+
+            <Label Text="{Binding pretTotal, StringFormat='Pret Total Estimativ: {0:N2} RON'}" 
+                   FontSize="20" 
+                   TextColor="#2196F3" 
+                   FontAttributes="Bold" />
+
+            <Button Text="Editează Programarea" 
+                    Margin="0,20,0,0" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White"
+                    Clicked="OnEditClicked" />
+
+            <Button Text="Șterge Programarea" 
+                    BackgroundColor="#F44336" 
+                    TextColor="White"
+                    Clicked="OnDeleteClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

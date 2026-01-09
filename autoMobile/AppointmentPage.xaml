@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autoMobile.AppointmentPage"
+             Title="Gestionare Programare">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Număr Înmatriculare:" FontAttributes="Bold" />
+        <Entry x:Name="plateEntry" Text="{Binding numarInmatriculare}" />
+
+        <Label Text="Data Programării:" FontAttributes="Bold" />
+        <DatePicker x:Name="datePicker" Date="{Binding data}" />
+
+        <Label Text="Status:" FontAttributes="Bold" />
+        <Entry x:Name="statusEntry" Text="{Binding status}" />
+
+        <Button Text="Salvează Modificările" 
+                Clicked="OnSaveClicked" 
+                BackgroundColor="#2196F3" 
+                TextColor="White" 
+                Margin="0,20,0,0" />
+    </VerticalStackLayout>
+</ContentPage>
