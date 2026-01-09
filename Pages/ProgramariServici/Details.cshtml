@@ -1,0 +1,31 @@
+﻿@page
+@model auto.Pages.ProgramariServici.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProgramareServiciu</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgramareServiciu.Programare)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgramareServiciu.Programare.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProgramareServiciu.Serviciu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProgramareServiciu.Serviciu.Denumire)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProgramareServiciu.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

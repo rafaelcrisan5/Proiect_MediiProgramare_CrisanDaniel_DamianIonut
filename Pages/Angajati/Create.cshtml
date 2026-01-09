@@ -1,0 +1,52 @@
+﻿@page
+@model auto.Pages.Angajati.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Angajat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Angajat.Nume" class="control-label"></label>
+                <input asp-for="Angajat.Nume" class="form-control" />
+                <span asp-validation-for="Angajat.Nume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Angajat.Prenume" class="control-label"></label>
+                <input asp-for="Angajat.Prenume" class="form-control" />
+                <span asp-validation-for="Angajat.Prenume" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Angajat.Email" class="control-label"></label>
+                <input asp-for="Angajat.Email" class="form-control" />
+                <span asp-validation-for="Angajat.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Angajat.DataAngajarii" class="control-label"></label>
+                <input asp-for="Angajat.DataAngajarii" class="form-control" />
+                <span asp-validation-for="Angajat.DataAngajarii" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

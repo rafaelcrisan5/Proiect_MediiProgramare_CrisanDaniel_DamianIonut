@@ -1,0 +1,74 @@
+﻿@page "/"
+@model auto.Pages.Programari.IndexModel
+
+<h1>Lista Programari</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Adauga Programare Noua</a>
+</p>
+
+<form method="get">
+    <div class="form-actions no-color">
+        <p>
+            Cauta dupa Numar Inmatriculare:
+            <input type="text" name="SearchString" value="@Model.SearchString" placeholder="Ex: CJ 10 ABC" />
+            <input type="submit" value="Cauta" class="btn btn-primary" /> |
+            <a asp-page="./Index">Arata tot</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+           
+                        <th>
+                            <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort" asp-route-searchString="@Model.SearchString">
+                                @Html.DisplayNameFor(model => model.Programare[0].Data)
+                            </a>
+                        </th>
+                      
+            <th>
+                Nr. Inmatriculare
+            </th>
+            <th>
+                Client
+            </th>
+            <th>
+                Mecanic
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Programare[0].Status)
+            </th>
+            <th>Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Programare)
+        {
+            <tr>
+                <td>
+                    @item.Data.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Masina.NrInmatriculare)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Masina.Client.Nume)
+                    @Html.DisplayFor(modelItem => item.Masina.Client.Prenume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Angajat.NumeComplet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

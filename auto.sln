@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "auto", "auto.csproj", "{A9367AC6-1571-415C-A528-2AA0823DE580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autoMobile", "..\autoMobile\autoMobile.csproj", "{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9367AC6-1571-415C-A528-2AA0823DE580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9367AC6-1571-415C-A528-2AA0823DE580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9367AC6-1571-415C-A528-2AA0823DE580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9367AC6-1571-415C-A528-2AA0823DE580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BAED21-7E2A-4F4F-89A9-4DFF2B82F14E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2D2B802-E55A-473C-B482-07D2EE88293A}
+	EndGlobalSection
+EndGlobal
